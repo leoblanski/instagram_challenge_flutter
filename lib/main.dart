@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_project/app_bar.dart';
+import 'package:flutter_instagram_project/profile_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,10 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
         title: appBar(),
         actions: [
           Icon(
             Icons.add_box_outlined,
+            color: Colors.black,
             size: 30,
           ),
           SizedBox(
@@ -54,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Icon(
             Icons.menu_outlined,
+            color: Colors.black,
             size: 35,
           ),
           SizedBox(
@@ -118,6 +123,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      backgroundColor: Colors.white,
+      body: profilePage(),
     );
   }
 }

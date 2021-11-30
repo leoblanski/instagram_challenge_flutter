@@ -12,7 +12,8 @@ class appBar extends StatelessWidget {
           children: [
             const Text(
               'leoblanski',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
             ),
           ],
         ),
