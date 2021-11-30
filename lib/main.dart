@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         fontFamily: 'SanFrancisco',
       ),
-      home: MyHomePage(title: 'leoblanski'),
+      home: MyHomePage(title: 'Instagram Challenge'),
     );
   }
 }
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
             size: 35,
           ),
           SizedBox(
-            width: 10,
+            width: 20,
           ),
         ],
       ),

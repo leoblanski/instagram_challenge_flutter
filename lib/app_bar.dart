@@ -28,12 +28,12 @@ class appBar extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 color: Colors.pink,
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(3.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Text(
-                  "9+",
+                  " 9+ ",
                   style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
               ),
