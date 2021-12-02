@@ -10,23 +10,23 @@ class profilePage extends StatelessWidget {
       children: [
         Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
-              child: Container(
-                width: 100,
-                height: 130,
-                decoration:
-                    BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-                child: Container(
-                  width: 30,
-                  height: 32,
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage(
-                              "https://instagram.fbnu3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/211191388_1108256999699967_1806206055414618988_n.jpg?_nc_ht=instagram.fbnu3-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=x5IDsU0g4aYAX-pUAGd&edm=AP_V10EBAAAA&ccb=7-4&oh=dca90c19aadda67feceda5ef3288bb76&oe=61AD41F8&_nc_sid=4f375e"))),
+            Expanded(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                child: CircleAvatar(
+                  backgroundColor: Colors.pink,
+                  radius: 60,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.white,
+                    radius: 43,
+                    child: CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      backgroundImage:
+                          AssetImage('assets/images/profilePicture.jpg'),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -82,6 +82,9 @@ class profilePage extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        SizedBox(
+          height: 5,
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 0),
@@ -241,8 +244,8 @@ class profilePage extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 30,
                             backgroundColor: Colors.white,
-                            backgroundImage: NetworkImage(
-                                "https://instagram.fuba2-1.fna.fbcdn.net/v/t51.12442-15/e35/c0.420.1080.1080a/s150x150/30087656_1684702894949315_1721793500669804544_n.jpg?_nc_ht=instagram.fuba2-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Z5m6bri8yxgAX9BMYwY&edm=ALbqBD0BAAAA&ccb=7-4&oh=971a889dc0f9107a8ab5d434f8b38d88&oe=61A8C1B2&_nc_sid=9a90d6"),
+                            backgroundImage:
+                                AssetImage('assets/images/storie_2.jpg'),
                           ),
                         ),
                       ),
@@ -266,8 +269,8 @@ class profilePage extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 30,
                             backgroundColor: Colors.white,
-                            backgroundImage: NetworkImage(
-                                "https://instagram.fuba2-1.fna.fbcdn.net/v/t51.2885-15/s150x150/241129671_3129824577253455_6988285456321145664_n.jpg?_nc_ht=instagram.fuba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=dr7jAFZDOUYAX-pRZLW&edm=ALbqBD0BAAAA&ccb=7-4&oh=3813b6f9c1c19eaac2ffbf19cb08c1a1&oe=61ADEB40&_nc_sid=9a90d6"),
+                            backgroundImage:
+                                AssetImage('assets/images/storie_3.jpg'),
                           ),
                         ),
                       ),
@@ -291,8 +294,8 @@ class profilePage extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 30,
                             backgroundColor: Colors.white,
-                            backgroundImage: NetworkImage(
-                                "https://instagram.fuba2-1.fna.fbcdn.net/v/t51.2885-15/e35/c161.510.899.899a/s150x150/210548289_531482871378375_5456928861620275682_n.jpg?_nc_ht=instagram.fuba2-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=gDW5JFofxlUAX96t-BY&edm=ALbqBD0BAAAA&ccb=7-4&oh=9a821d5c79cb562a94dab1cd0bb3d104&oe=61A8B625&_nc_sid=9a90d6"),
+                            backgroundImage:
+                                AssetImage('assets/images/storie_4.jpg'),
                           ),
                         ),
                       ),
@@ -302,6 +305,31 @@ class profilePage extends StatelessWidget {
                       Text("Giver"),
                     ],
                   ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                      child: Icon(
+                    Icons.grid_on,
+                    color: Colors.black,
+                    size: 30,
+                  )),
+                  Expanded(
+                      child: Icon(
+                    Icons.play_arrow_outlined,
+                    color: Colors.black54,
+                    size: 40,
+                  )),
+                  Expanded(
+                      child: Icon(
+                    Icons.person_outline,
+                    color: Colors.black54,
+                    size: 40,
+                  )),
                 ],
               ),
             ],
