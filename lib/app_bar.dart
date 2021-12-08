@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class appBar extends StatelessWidget {
   const appBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: Colors.white,
+      title: _getTitleAppBar(),
+      actions: _getActionsAppBar(),
+    );
+  }
+
+  Widget _getTitleAppBar() {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -18,8 +28,8 @@ class appBar extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 1.5,
-          width: 6,
+          height: 0.2.h,
+          width: 3.w,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,5 +52,26 @@ class appBar extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  List<Widget> _getActionsAppBar() {
+    return [
+      Icon(
+        Icons.add_box_outlined,
+        color: Colors.black,
+        size: 50,
+      ),
+      SizedBox(
+        width: 7,
+      ),
+      Icon(
+        Icons.menu_outlined,
+        color: Colors.black,
+        size: 40.sp,
+      ),
+      SizedBox(
+        width: 5,
+      ),
+    ];
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_project/profile/stories_memories.dart';
+import 'package:sizer/sizer.dart';
 
 class profilePage extends StatelessWidget {
   const profilePage({Key? key}) : super(key: key);
@@ -16,12 +18,12 @@ class profilePage extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                 child: CircleAvatar(
                   backgroundColor: Colors.pink,
-                  radius: 60,
+                  radius: 35.sp,
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
-                    radius: 43,
+                    radius: 31.sp,
                     child: CircleAvatar(
-                      radius: 40,
+                      radius: 30.sp,
                       backgroundColor: Colors.white,
                       backgroundImage:
                           AssetImage('assets/images/profilePicture.jpg'),
@@ -43,7 +45,7 @@ class profilePage extends StatelessWidget {
                         Text(
                           "69",
                           textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 14.sp),
                         ),
                         Text(
                           "Posts",
@@ -59,7 +61,7 @@ class profilePage extends StatelessWidget {
                       children: [
                         Text(
                           "3.145",
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 14.sp),
                         ),
                         Text("Followers"),
                       ],
@@ -72,7 +74,7 @@ class profilePage extends StatelessWidget {
                       children: [
                         Text(
                           "1.921",
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(fontSize: 14.sp),
                         ),
                         Text("Following"),
                       ],
@@ -94,7 +96,8 @@ class profilePage extends StatelessWidget {
                 children: [
                   Text(
                     "Leonardo Blanski",
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    style:
+                        TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w700),
                   ),
                 ],
               ),
@@ -102,7 +105,8 @@ class profilePage extends StatelessWidget {
                 children: [
                   Text(
                     "Software Developer",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w200),
+                    style:
+                        TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w200),
                   ),
                 ],
               ),
@@ -110,7 +114,8 @@ class profilePage extends StatelessWidget {
                 children: [
                   Text(
                     "São Chico | Jvlle",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w200),
+                    style:
+                        TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w200),
                   ),
                 ],
               ),
@@ -203,137 +208,40 @@ class profilePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.black38,
-                        radius: 36,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 34,
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            backgroundImage: NetworkImage(
-                                "https://instagram.fbnu3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/211191388_1108256999699967_1806206055414618988_n.jpg?_nc_ht=instagram.fbnu3-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=x5IDsU0g4aYAX-pUAGd&edm=AP_V10EBAAAA&ccb=7-4&oh=dca90c19aadda67feceda5ef3288bb76&oe=61AD41F8&_nc_sid=4f375e"),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text("l"),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.black38,
-                        radius: 36,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 34,
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            backgroundImage:
-                                AssetImage('assets/images/storie_2.jpg'),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text("Vibes"),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.black38,
-                        radius: 36,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 34,
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            backgroundImage:
-                                AssetImage('assets/images/storie_3.jpg'),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text("Projects"),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.black38,
-                        radius: 36,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          radius: 34,
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            backgroundImage:
-                                AssetImage('assets/images/storie_4.jpg'),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text("Giver"),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                      child: Icon(
-                    Icons.grid_on,
-                    color: Colors.black,
-                    size: 30,
-                  )),
-                  Expanded(
-                      child: Icon(
-                    Icons.play_arrow_outlined,
-                    color: Colors.black54,
-                    size: 40,
-                  )),
-                  Expanded(
-                      child: Icon(
-                    Icons.person_outline,
-                    color: Colors.black54,
-                    size: 40,
-                  )),
-                ],
-              ),
             ],
           ),
+        ),
+        SizedBox(
+          height: 1.h,
+        ),
+        StorieMemories(),
+        SizedBox(height: 20),
+        AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          actions: [
+            Expanded(
+              child: Icon(
+                Icons.grid_on,
+                color: Colors.black,
+                size: 30,
+              ),
+            ),
+            Expanded(
+              child: Icon(
+                Icons.play_arrow_outlined,
+                color: Colors.black,
+                size: 40,
+              ),
+            ),
+            Expanded(
+              child: Icon(
+                Icons.person_outline,
+                color: Colors.black,
+                size: 40,
+              ),
+            ),
+          ],
         ),
       ],
     );
