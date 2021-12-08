@@ -14,33 +14,38 @@ class profilePage extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-                child: CircleAvatar(
-                  backgroundColor: Colors.pink,
-                  radius: 35.sp,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 31.sp,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.pink,
+                    radius: 35.sp,
                     child: CircleAvatar(
-                      radius: 30.sp,
                       backgroundColor: Colors.white,
-                      backgroundImage:
-                          AssetImage('assets/images/profilePicture.jpg'),
+                      radius: 32.sp,
+                      child: CircleAvatar(
+                        radius: 30.sp,
+                        backgroundColor: Colors.white,
+                        backgroundImage:
+                            AssetImage('assets/images/profilePicture.jpg'),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 0),
+            SizedBox(
+              width: 15.w,
+            ),
+            Expanded(
               child: Center(
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,7 +62,7 @@ class profilePage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 5.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,7 +75,7 @@ class profilePage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 5.w,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -86,13 +91,14 @@ class profilePage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(),
           ],
         ),
         SizedBox(
           height: 5,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 0),
+          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 0),
           child: Column(
             children: [
               Row(
