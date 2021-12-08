@@ -16,13 +16,10 @@ A ideia é continuar com este projeto, elaborando as demais telas.
 Foi utilizado os icones do Google Icons, deste modo é visível que alguns ícones estão diferentes do Instagram.
 
 
-Protótipo baseado na imagem abaixo:
+## Protótipo baseado na imagem abaixo:
 
-![image](https://user-images.githubusercontent.com/34586977/145270555-9947b401-d056-4a49-a51d-4742e27e26f9.png)
+![image](https://user-images.githubusercontent.com/34586977/145270849-44163f7a-4c64-4b39-9581-25785edb4375.png)
 
-
-Projeto Final:
-
-Status atual:
+## Status atual:
 
 ![image](https://user-images.githubusercontent.com/34586977/145270450-6387f11b-47a4-4356-a5ce-429b176bbe4a.png)
