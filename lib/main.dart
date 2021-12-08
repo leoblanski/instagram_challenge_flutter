@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_project/app_bar.dart';
 import 'package:flutter_instagram_project/bottom_navigation_bar.dart';
 import 'package:flutter_instagram_project/profile/profile_page.dart';
 import 'package:sizer/sizer.dart';
@@ -19,21 +18,21 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         fontFamily: 'SanFrancisco',
       ),
-      home: MyHomePage(title: 'Instagram Challenge'),
+      home: HomePage(title: 'Instagram Challenge'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
@@ -41,61 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          title: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  const Text(
-                    'leoblanski',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.black),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 1.5,
-                width: 6,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.pink,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Text(
-                        " 9+ ",
-                        style: TextStyle(color: Colors.white, fontSize: 14),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          actions: [
-            Icon(
-              Icons.add_box_outlined,
-              color: Colors.black,
-              size: 20,
-            ),
-            SizedBox(
-              width: 7,
-            ),
-            Icon(
-              Icons.menu_outlined,
-              color: Colors.black,
-              size: 25,
-            ),
-            SizedBox(
-              width: 5,
-            ),
-          ],
+          title: _getTitleAppBar(),
+          actions: _getActionsAppBar(),
         ),
         bottomNavigationBar: BottomNavigationBarWidget(),
         backgroundColor: Colors.white,
@@ -103,4 +49,64 @@ class _MyHomePageState extends State<MyHomePage> {
       );
     });
   }
+}
+
+Widget _getTitleAppBar() {
+  return Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Column(
+        children: [
+          const Text(
+            'leoblanski',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+          ),
+        ],
+      ),
+      SizedBox(
+        height: 0.2.h,
+        width: 3.w,
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.pink,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Text(
+                " 9+ ",
+                style: TextStyle(color: Colors.white, fontSize: 14),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ],
+  );
+}
+
+List<Widget> _getActionsAppBar() {
+  return [
+    Icon(
+      Icons.add_box_outlined,
+      color: Colors.black,
+      size: 20.sp,
+    ),
+    SizedBox(
+      width: 5.w,
+    ),
+    Icon(
+      Icons.menu_outlined,
+      color: Colors.black,
+      size: 25.sp,
+    ),
+    SizedBox(
+      width: 4.w,
+    ),
+  ];
 }

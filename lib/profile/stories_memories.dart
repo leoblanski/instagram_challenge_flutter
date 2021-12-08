@@ -6,55 +6,67 @@ class StorieMemories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, dynamic> listStoriesMemories = {
-      '0': {
+    List listStoriesMemories = [
+      {
         'title': 'Me',
         'picture': 'storie_1.jpg',
       },
-      '1': {
+      {
         'title': 'Vibes',
         'picture': 'storie_2.jpg',
       },
-      '2': {
+      {
+        'title': 'Trips',
+        'picture': 'storie_6.jpg',
+      },
+      {
         'title': 'Projetos',
         'picture': 'storie_3.jpg',
       },
-      '3': {
-        'title': 'Me',
+      {
+        'title': 'Giver',
         'picture': 'storie_4.jpg',
       },
-      '4': {
-        'title': 'Me',
-        'picture': 'storie_1.jpg',
+      {
+        'title': 'Totvs',
+        'picture': 'storie_5.jpg',
       },
-      '5': {
-        'title': 'Me',
-        'picture': 'storie_1.jpg',
+      {
+        'title': 'Surf',
+        'picture': 'storie_7.jpg',
       },
-    };
+    ];
 
     return SizedBox(
-      height: 10.h,
+      height: 13.h,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 10,
+        itemCount: listStoriesMemories.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Row(
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
                 backgroundColor: Colors.black38,
-                radius: 30.sp,
+                radius: 24.sp,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 23.5.sp,
+                  radius: 23.sp,
                   child: CircleAvatar(
-                    radius: 22.sp,
+                    radius: 21.sp,
                     backgroundColor: Colors.white,
-                    backgroundImage:
-                        AssetImage('assets/images/profilePicture.jpg'),
+                    backgroundImage: AssetImage(
+                        'assets/images/${listStoriesMemories[index]['picture']}'),
                   ),
                 ),
+              ),
+              Text(
+                listStoriesMemories[index]['title'],
+                style: TextStyle(fontSize: 09.sp),
+              ),
+              SizedBox(
+                width: 19.w,
               ),
             ],
           );

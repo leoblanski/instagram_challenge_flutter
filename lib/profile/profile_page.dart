@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_project/profile/bottom_itens.dart';
+import 'package:flutter_instagram_project/profile/list_pictures_profile.dart';
+import 'package:flutter_instagram_project/profile/menu_action_center.dart';
 import 'package:flutter_instagram_project/profile/stories_memories.dart';
 import 'package:sizer/sizer.dart';
 
@@ -122,92 +125,7 @@ class profilePage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        side: MaterialStateProperty.all(
-                            BorderSide(width: 0.5, color: Colors.black38)),
-                        elevation: MaterialStateProperty.all(0),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Edit Profile",
-                        style: TextStyle(color: Colors.black, shadows: []),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(EdgeInsets.all(0)),
-                        side: MaterialStateProperty.all(
-                            BorderSide(width: 0.5, color: Colors.black38)),
-                        elevation: MaterialStateProperty.all(0),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Ad Tools",
-                        style: TextStyle(color: Colors.black, shadows: []),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(EdgeInsets.all(0)),
-                        side: MaterialStateProperty.all(
-                            BorderSide(width: 0.5, color: Colors.black38)),
-                        elevation: MaterialStateProperty.all(0),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Insights",
-                        style: TextStyle(color: Colors.black, shadows: []),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(EdgeInsets.all(0)),
-                        side: MaterialStateProperty.all(
-                            BorderSide(width: 0.5, color: Colors.black38)),
-                        elevation: MaterialStateProperty.all(0),
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.white),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        "Contact",
-                        style: TextStyle(color: Colors.black, shadows: []),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              BottomItens(),
             ],
           ),
         ),
@@ -215,34 +133,8 @@ class profilePage extends StatelessWidget {
           height: 1.h,
         ),
         StorieMemories(),
-        SizedBox(height: 20),
-        AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          actions: [
-            Expanded(
-              child: Icon(
-                Icons.grid_on,
-                color: Colors.black,
-                size: 30,
-              ),
-            ),
-            Expanded(
-              child: Icon(
-                Icons.play_arrow_outlined,
-                color: Colors.black,
-                size: 40,
-              ),
-            ),
-            Expanded(
-              child: Icon(
-                Icons.person_outline,
-                color: Colors.black,
-                size: 40,
-              ),
-            ),
-          ],
-        ),
+        MenuActionCenterProfile(),
+        ListPicturesProfile(),
       ],
     );
   }
