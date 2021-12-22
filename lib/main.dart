@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_instagram_project/bottom_navigation_bar.dart';
+import 'package:flutter_instagram_project/base_scaffold.dart';
 import 'package:flutter_instagram_project/profile/profile_page.dart';
 import 'package:sizer/sizer.dart';
 
@@ -13,41 +13,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Instagram - Perfil',
+      title: 'Instagram',
       theme: ThemeData(
         primaryColor: Colors.white,
         fontFamily: 'SanFrancisco',
       ),
-      home: HomePage(title: 'Instagram Challenge'),
+      home: Sizer(builder: (context, orientation, deviceType) {
+        return BaseScaffold(
+          body: profilePage(),
+        );
+      }),
     );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          title: _getTitleAppBar(),
-          actions: _getActionsAppBar(),
-        ),
-        bottomNavigationBar: BottomNavigationBarWidget(),
-        backgroundColor: Colors.white,
-        body: SingleChildScrollView(child: profilePage()),
-      );
-    });
   }
 }
 
